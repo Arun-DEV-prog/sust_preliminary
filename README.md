@@ -37,6 +37,10 @@ The service is designed to avoid unsafe support behavior:
 - GET /health
 - POST /analyze-ticket
 
+## Live demo
+
+- Health check: https://mock-sust-edg0rxlmf-arun-kumar-roys-projects.vercel.app/health
+
 ## Run locally
 
 ```bash
