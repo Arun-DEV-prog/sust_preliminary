@@ -1,0 +1,27 @@
+{
+  "name": "mock-sust",
+  "version": "1.0.0",
+  "private": false,
+  "description": "AI/API support copilot service for complaint investigation and safe support routing",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "build": "prisma generate --no-engine",
+    "test": "node --test",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.21.2",
+    "serverless-http": "^4.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prisma": "^6.6.0"
+  }
+}

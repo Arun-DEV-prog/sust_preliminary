@@ -1,0 +1,14 @@
+{
+  "ticket_id": "TKT-001",
+  "relevant_transaction_id": "TXN-9101",
+  "evidence_verdict": "consistent",
+  "case_type": "wrong_transfer",
+  "severity": "high",
+  "department": "dispute_resolution",
+  "agent_summary": "Customer reports a transfer issue related to transaction TXN-9101. The evidence supports the report and should be reviewed with the customer before any action is taken.",
+  "recommended_next_action": "Verify transaction TXN-9101 with the customer and review the recipient details before escalating to dispute resolution.",
+  "customer_reply": "We have noted your concern about transaction TXN-9101. Our team is reviewing the details and will continue through official support channels.",
+  "human_review_required": true,
+  "confidence": 0.9,
+  "reason_codes": ["transaction_match", "wrong_transfer"]
+}

@@ -1,0 +1,23 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model TicketAnalysis {
+    id                    String   @id @default(cuid())
+    ticketId              String
+    relevantTransactionId String?
+    evidenceVerdict       String
+    caseType              String
+    severity              String
+    department            String
+    confidence            Float
+    humanReviewRequired   Boolean
+    createdAt             DateTime @default(now())
+
+    @@map("ticket_analyses")
+}

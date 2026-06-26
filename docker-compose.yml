@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mock_sust
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  prisma-studio:
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm install -g prisma && prisma studio --hostname 0.0.0.0 --port 5555"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/mock_sust?schema=public
+    ports:
+      - '5555:5555'
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
